@@ -1,0 +1,20 @@
+version: 0.2
+phases:
+  install:
+    runtime-versions:
+      nodejs: 14.x
+    commands:
+      # install npm
+      - npm install
+  build:
+    commands:
+      # run build script
+      - echo "Build started on `date`"
+      - npm run build
+      - echo "Build Succeeded"
+      - echo "Build finished on `date`"
+artifacts:
+  name: "BuildOutput"
+  files:
+    - "**/*"
+  base-directory: build
