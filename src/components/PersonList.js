@@ -16,7 +16,7 @@ export default class PersonList extends React.Component {
 
   render() {
     return (
-      <h1>this.state.persons</h1>
+      <h1>{this.state.persons}</h1>
     )
   }
 }
